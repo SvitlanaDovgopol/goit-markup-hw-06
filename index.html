@@ -574,8 +574,7 @@
 
         <!--форма підписки-->
 
-       
-        <div class="footer-subscribe-form">
+          <div class="footer-subscribe-form">
           <p class="subscribe-title">Subscribe</p>
           <form 
           class="subscribe-form" 
@@ -584,6 +583,7 @@
            <div class="subscribe-form-field">
               <label for="email"></label>
               <input 
+               class="subscribe-mail"
                 type="text" 
                 name="email" 
                 id="email" 
@@ -627,14 +627,15 @@
             <div class="form-field">
 
               <label for="name" class="form-field-item">Name</label>
-              <div>
+              <div class="form-field-line">
               <input 
+                class= "modal-form-input"
                 type="text" 
                 name="name" 
                 id="name" 
                 autofocus
                 >
-                <svg class="" width="" height="">
+                <svg class="" width="12" height="12">
                   <use href=""></use>
                 </svg>
               </div>
@@ -642,13 +643,14 @@
   
             <div class="form-field">
               <label for="phone" class="form-field-item">Phone</label>
-              <div>
-                <input 
+              <div class="form-field-line" >
+                <input  '
+                class= "modal-form-input"
                 type="text" 
                 name="phone" 
                 id="phone" 
               >
-                <svg class="" width="" height="">
+                <svg class="" width="12" height="12">
                   <use href=""></use>
                 </svg>
               </div>
@@ -656,28 +658,33 @@
   
             <div class="form-field">
               <label for="email" class="form-field-item">Email</label>
-              <div> <input 
+              <div class="form-field-line"> 
+                <input 
+                 class= "modal-form-input"
                 type="text" 
                 name="email" 
                 id="email" 
               >
-                 <svg class="" width="" height="">
+                 <svg class="" width="12" height="12">
                   <use href=""></use>
                 </svg>
               </div>
             </div>
   
-            <div class="form-field">
+          
               <label for="user_message" class="form-field-item">Comment</label>
-              <textarea
+              <div class="form-field-line"> 
+                <textarea
                 class="modal-form-message"
                 name="user_message"
                 rows="5"
                 placeholder="Text input">
               </textarea>
-            </div>
+              </div>
+           
           
             <label class="modal-form-agreement">
+              <div class="form-field-agreement"> 
               <input 
                 class="modal-form-agreement-box" 
                 type="checkbox" 
@@ -689,10 +696,11 @@
                       href="">Privacy Policy
                     </a>
                 </span>
+              </div>
             </label>
   
             <button 
-              class="btn" 
+              class="modal-send-btn" 
               type="submit"
               >Send
             </button>
