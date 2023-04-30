@@ -975,16 +975,59 @@ header {
 
 .modal-form-input {
   width: 100%;
-  height: 46px;
+  height: 40px;
   padding: 0 38px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+
+  transition: border-color 250ms var(--cubic);
 }
-.form-field-line {
+
+.modal-form-input:focus {
+  border-color: var(--primary-blue-color);
+}
+
+.modal-form-input:focus + .registration-icon {
+  fill: var(--primary-blue-color);
+}
+.form-field {
   margin-bottom: 8px;
+}
+
+.form-field-style {
+  position: relative;
+}
+
+.form-field-label {
+  position: relative;
+
+  top: 0;
+  left: 0;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  color: var(--secondary-slate);
+}
+
+.registration-icon {
+  position: absolute;
+  top: 50%;
+  left: 19px;
+
+  transform: translateY(-50%);
+
+  fill: currentColor;
+
+  transition: fill 250ms var(--cubic);
 }
 
 .modal-form-message {
   width: 100%;
-
   margin-bottom: 15px;
 
   display: block;
@@ -1004,8 +1047,7 @@ header {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
 }
-.modal-form-agreement {
-}
+
 .modal-form-agreement-box {
   background-color: var(--modal-window);
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -1015,6 +1057,7 @@ header {
 .form-field-agreement {
   margin-bottom: 24px;
 }
+
 .modal-form-agreement-text {
   font-family: Roboto;
   font-size: 12px;
@@ -1024,8 +1067,6 @@ header {
   text-align: left;
 }
 
-.modal-form-agreement-link {
-}
 .modal-send-btn {
   padding: 16px, 32px, 16px, 32px;
   margin-left: auto;
@@ -1064,6 +1105,11 @@ header {
 
 /*subscribe form*/
 
+.footer-subscribe-form {
+  width: 453px;
+  height: 80px;
+}
+
 .subscribe-title {
   margin-bottom: 16px;
 
@@ -1078,12 +1124,11 @@ header {
   color: var(--primary-white-color);
 }
 
-.footer-subscribe-form {
-}
 .subscribe-form {
   display: flex;
   justify-content: center;
 }
+
 .subscribe-mail {
   background-color: var(--title-text-color);
   margin-right: 24px;
@@ -1096,6 +1141,7 @@ header {
 
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
+
 .subscribe-btn {
   position: relative;
 
@@ -1103,20 +1149,22 @@ header {
   margin-left: auto;
   margin-right: auto;
 
-  display: block;
+  display: flex;
   align-items: center;
   gap: 16px;
 
-  min-height: 40px;
-  min-width: 165px;
+  height: 40px;
+  width: 165px;
 
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.04em;
-  text-align: center;
   color: var(--primary-white-color);
+
+  text-align: left;
+  padding-left: 24px;
 
   background-color: var(--primary-blue-color);
   border-color: var(--primary-blue-color);
@@ -1132,17 +1180,6 @@ header {
   border-color: var(--pressed-color);
 }
 
-.subscribe-action {
-}
-
-.thumb-button {
-  margin: 2px 10px 2px 16px;
-
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: var(--secondary-white-color);
+.subscribe-icon {
+  fill: var(--primary-white-color);
 }
