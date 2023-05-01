@@ -559,7 +559,6 @@ header {
 .container.flex {
   display: flex;
   align-items: baseline;
-  /*gap: 120px;*/
 }
 
 .footer-block {
@@ -1049,14 +1048,49 @@ header {
 }
 
 .modal-form-agreement-box {
+  margin-bottom: 24px;
+
   background-color: var(--modal-window);
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
 }
 
-.form-field-agreement {
-  margin-bottom: 24px;
+/*
+.modal-form-agreement-box:checked {
+  background-color: var(--modal-window);
+  border-color: var(--secondary-slate);
+  background-size: 10px;
+  border-radius: 4px;
+
+  transition-delay: 250ms, 250ms, 0;
 }
+
+.modal-form-agreement-unchecked {
+  opacity: 1;
+  transition: 250ms var(--cubic);
+}
+
+input[type="checkbox"]:checked
+  + .modal-form-agreement-icon
+  > .modal-form-agreement-unchecked {
+  opacity: 0;
+}
+
+.modal-form-agreement-checked {
+  opacity: 0;
+  transition: 250ms var(--cubic);
+}
+
+input[type="checkbox"]:checked
+  + .modal-form-agreement-icon
+  > .modal-form-agreement-checked {
+  opacity: 1;
+}
+
+.modal-form-agreement-icon {
+  fill: var(--primary-white-color);
+}
+*/
 
 .modal-form-agreement-text {
   font-family: Roboto;
@@ -1143,9 +1177,21 @@ header {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
-.subscribe-btn {
-  position: relative;
+.subscribe-form-field {
+  outline: none;
+}
 
+.subscribe-form-field ::placeholder {
+  padding-left: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+
+  letter-spacing: 0.04em;
+  color: var(--primary-white-color);
+}
+
+.subscribe-btn {
   padding: 8px 24px;
   margin-left: auto;
   margin-right: auto;
@@ -1165,7 +1211,6 @@ header {
   color: var(--primary-white-color);
 
   text-align: left;
-  padding-left: 24px;
 
   background-color: var(--primary-blue-color);
   border-color: var(--primary-blue-color);
@@ -1183,4 +1228,5 @@ header {
 
 .subscribe-icon {
   fill: var(--primary-white-color);
+  display: block;
 }
