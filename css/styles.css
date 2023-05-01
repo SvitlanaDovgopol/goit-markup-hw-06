@@ -985,6 +985,7 @@ header {
 
 .modal-form-input:focus {
   border-color: var(--primary-blue-color);
+  outline: none;
 }
 
 .modal-form-input:focus + .registration-icon {
@@ -1045,52 +1046,63 @@ header {
 
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  outline: none;
+
+  transition: fill 250ms var(--cubic);
+}
+
+.modal-form-message:focus {
+  border-color: var(--primary-blue-color);
+}
+
+.modal-form-agreement {
+  position: relative;
+  margin-bottom: 24px;
+
+  display: flex;
+
+  align-items: center;
+  gap: 8px;
 }
 
 .modal-form-agreement-box {
-  margin-bottom: 24px;
+  appearance: none;
 
-  background-color: var(--modal-window);
+  width: 16px;
+  height: 16px;
+
   border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-}
-
-/*
-.modal-form-agreement-box:checked {
+  border-radius: 2px;
   background-color: var(--modal-window);
-  border-color: var(--secondary-slate);
-  background-size: 10px;
-  border-radius: 4px;
 
-  transition-delay: 250ms, 250ms, 0;
+  transition: background-color 250ms var(--cubic);
+  cursor: pointer;
 }
 
-.modal-form-agreement-unchecked {
-  opacity: 1;
-  transition: 250ms var(--cubic);
-}
-
-input[type="checkbox"]:checked
-  + .modal-form-agreement-icon
-  > .modal-form-agreement-unchecked {
-  opacity: 0;
+.modal-form-agreement-box:checked {
+  background-color: var(--pressed-color);
+  border-color: var(--pressed-color);
+  background-size: 16px;
 }
 
 .modal-form-agreement-checked {
   opacity: 0;
-  transition: 250ms var(--cubic);
+  transition: var(--cubic);
+}
+
+.modal-form-agreement-icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: opacity 250ms var(--cubic);
 }
 
 input[type="checkbox"]:checked
   + .modal-form-agreement-icon
   > .modal-form-agreement-checked {
   opacity: 1;
-}
-
-.modal-form-agreement-icon {
   fill: var(--primary-white-color);
 }
-*/
 
 .modal-form-agreement-text {
   font-family: Roboto;
