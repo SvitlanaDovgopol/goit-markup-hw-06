@@ -1055,56 +1055,50 @@ header {
   border-color: var(--primary-blue-color);
 }
 
+.modal-form-message ::placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+
+  color: rgba(46, 47, 66, 0.4);
+}
+
 .modal-form-agreement {
-  position: relative;
   margin-bottom: 24px;
 
   display: flex;
-
+  justify-content: flex-start;
   align-items: center;
-  gap: 8px;
 }
 
 .modal-form-agreement-box {
   appearance: none;
-
-  width: 16px;
-  height: 16px;
-
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 2px;
-  background-color: var(--modal-window);
-
-  transition: background-color 250ms var(--cubic);
-  cursor: pointer;
+}
+input[type="checkbox"]:checked
+  + .modal-form-agreement-icon
+  > .modal-form-agreement-unchecked {
+  opacity: 0;
 }
 
-.modal-form-agreement-box:checked {
-  background-color: var(--pressed-color);
-  border-color: var(--pressed-color);
-  background-size: 16px;
+.modal-form-agreement-unchecked {
+  opacity: 1;
+  transition: 250ms var(--cubic);
 }
-
 .modal-form-agreement-checked {
   opacity: 0;
-  transition: var(--cubic);
+  transition: 250ms var(--cubic);
 }
-
-.modal-form-agreement-icon {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  transition: opacity 250ms var(--cubic);
-}
-
 input[type="checkbox"]:checked
   + .modal-form-agreement-icon
   > .modal-form-agreement-checked {
   opacity: 1;
-  fill: var(--primary-white-color);
 }
 
 .modal-form-agreement-text {
+  margin-left: 8px;
   font-family: Roboto;
   font-size: 12px;
   font-weight: 400;
@@ -1113,6 +1107,9 @@ input[type="checkbox"]:checked
   text-align: left;
 }
 
+.modal-form-agreement-link {
+  color: var(--primary-blue-color);
+}
 .modal-send-btn {
   padding: 16px, 32px, 16px, 32px;
   margin-left: auto;
@@ -1179,9 +1176,16 @@ input[type="checkbox"]:checked
 .subscribe-mail {
   background-color: var(--title-text-color);
   margin-right: 24px;
+  padding-left: 16px;
 
   height: 40px;
   width: 264px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: var(--primary-white-color);
 
   border: 1px solid var(--primary-white-color);
   border-radius: 4px;
@@ -1194,7 +1198,6 @@ input[type="checkbox"]:checked
 }
 
 .subscribe-form-field ::placeholder {
-  padding-left: 16px;
   font-weight: 400;
   font-size: 12px;
   line-height: 24px;

@@ -670,15 +670,12 @@
 
             <div class="form-field">
               <label for="user_message" class="form-field-label">Comment</label>
-              <div class="form-field-line">
-                <textarea
-                  class="modal-form-message"
-                  name="user_message"
-                  rows="5"
-                  placeholder="Text input"
-                >
-                </textarea>
-              </div>
+              <textarea
+                class="modal-form-message"
+                name="user_message"
+                rows="5"
+                placeholder="Text input"
+              ></textarea>
             </div>
 
             <label class="modal-form-agreement">
@@ -689,8 +686,12 @@
               />
               <svg class="modal-form-agreement-icon" width="16" height="16">
                 <use
+                  class="modal-form-agreement-unchecked"
+                  href="./images/icons.svg#icon-unchecked"
+                ></use>
+                <use
                   class="modal-form-agreement-checked"
-                  href="./images/icons.svg#icon-check"
+                  href="./images/icons.svg#icon-checked"
                 ></use>
               </svg>
 
