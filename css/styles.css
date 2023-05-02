@@ -667,10 +667,11 @@ header {
 
 .categories-button {
   padding: 12px 24px;
-  display: inline-block;
+  display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  min-width: 126px;
+  min-width: 69px;
 
   font-family: inherit;
   font-weight: 500;
@@ -681,19 +682,20 @@ header {
 
   background-color: var(--secondary-white-color);
   border: 1px solid var(--header-color);
-  border-bottom: var(--header-color);
+
+  border: 1px solid var(--header-color);
   border-radius: 4px;
   cursor: pointer;
 
   transition: color 250ms var(--cubic), background-color 250ms var(--cubic),
-    border 250ms var(--cubic), box-shadow 250ms var(--cubic);
+    border-color 250ms var(--cubic);
 }
 
 .categories-button:hover,
 .categories-button:focus {
   color: var(--primary-white-color);
   background-color: var(--pressed-color);
-  border: var(--pressed-color);
+  border-color: var(--pressed-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -1028,7 +1030,6 @@ header {
 }
 
 .modal-form-message {
-  width: 100%;
   margin-bottom: 15px;
 
   display: block;
@@ -1036,6 +1037,8 @@ header {
   min-height: 120px;
   max-height: 180px;
   padding: 16px;
+
+  resize: none;
 
   font-family: "Roboto";
   font-style: normal;
@@ -1134,12 +1137,11 @@ input[type="checkbox"]:checked
   color: var(--primary-white-color);
 
   background-color: var(--primary-blue-color);
-  border-color: var(--primary-blue-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
   border-radius: 4px;
 
-  transition: background-color 250ms var(--cubic),
-    border-color 250ms var(--cubic);
+  transition: background-color 250ms var(--cubic);
 }
 
 .modal-send-btn:hover,
@@ -1231,11 +1233,11 @@ input[type="checkbox"]:checked
   text-align: left;
 
   background-color: var(--primary-blue-color);
-  border-color: var(--primary-blue-color);
+
+  border: none;
   border-radius: 4px;
 
-  transition: background-color 250ms var(--cubic),
-    border-color 250ms var(--cubic);
+  transition: background-color 250ms var(--cubic);
 }
 
 .subscribe-btn:hover,
